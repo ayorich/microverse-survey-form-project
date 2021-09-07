@@ -17,22 +17,24 @@
       <div class="form">
         <form id="survey-form">
           <div class="name">
-            <label for="name-labe">Name</label>
+            <label for="name" id="name-label">Name</label>
             <input
               type="text"
               id="name"
               placeholder="Enter your first name"
+              required
             />
           </div>
           <div class="email">
-            <label for="email-label">Email</label>
-            <input type="email" id="email-label" placeholder="Enter email" />
+            <label for="email" id="email-label">Email</label>
+
+            <input type="email" id="email" placeholder="Enter email" required />
           </div>
           <div class="number">
-            <label for="number-label">Age (optional)</label>
+            <label for="number" id="number-label">Age (optional)</label>
             <input
               type="number"
-              id="number-label"
+              id="number"
               placeholder="Enter number of your age"
               min="10"
               max="150"
@@ -54,15 +56,16 @@
           <div class="radio">
             <p>Would you recommend freeCodeCamp to a friend?</p>
 
-            <input type="radio" name="recommend" />
+            <input type="radio" name="recommend" value="Definitely" />
             <label for="Definitely">Definitely</label>
 
-            <input type="radio" name="recommend" />
+            <input type="radio" name="recommend" value="Maybe" />
             <label for="Maybe">Maybe</label>
 
-            <input type="radio" name="recommend" />
+            <input type="radio" name="recommend" value="Not" />
             <label for="Not sure">Not sure</label>
           </div>
+
           <div class="check1">
             <p>What is your favorite feature of freeCodeCamp?</p>
             <select id="dropdown">
@@ -71,43 +74,69 @@
               <option value="project">Project</option>
               <option value="community">COmmunity</option>
               <option value="open">Open scource</option>
-              </select>
+            </select>
           </div>
+
           <div class="check2">
             <p>What would you like to see improved? (Check all that apply)</p>
-            <input type="checkbox" value="Front-end">
-            <label>Front-end Projects</label>
+            <input
+              name="radiobtn"
+              type="checkbox"
+              value="Front-end"
+              id="Front-end"
+            />
+            <label for="Front-end">Front-end Projects</label>
 
-            <input type="checkbox" value="Back-end">
-            <label>Back-end Projects</label>
+            <input
+              name="radiobtn"
+              type="checkbox"
+              value="Back-end"
+              id="Back-end"
+            />
+            <label for="Back-end">Back-end Projects</label>
 
-            <input type="checkbox" value="Data">
-            <label>Data Visualization</label>
+            <input name="radiobtn" type="checkbox" value="Data" id="Data" />
+            <label for="Data">Data Visualization</label>
 
-            <input type="checkbox" value="">
-            <label>Challenges</label>
+            <input
+              name="radiobtn"
+              type="checkbox"
+              value="Challenges"
+              id="Challenges"
+            />
+            <label for="Challenges">Challenges</label>
 
-            <input type="checkbox" value="Open">
-            <label>Open Source Community</label>
+            <input name="radiobtn" type="checkbox" value="Open" id="Open" />
+            <label for="Open">Open Source Community</label>
 
-            <input type="checkbox" value="Gitter">
-            <label>Gitter help rooms</label>
-            
-            <input type="checkbox" value="Videos">
-            <label>Videos</label>
+            <input name="radiobtn" type="checkbox" value="Gitter" id="Gitter" />
+            <label for="Gitter">Gitter help rooms</label>
 
-            <input type="checkbox" value="City">
-            <label>City Meetups</label>
-            
-            <input type="checkbox" value="Wiki">
-            <label>Wiki</label>
-            
-            <input type="checkbox" value="Forum">
-            <label>Forum</label>
+            <input name="radiobtn" type="checkbox" value="Videos" id="Videos" />
+            <label for="Videos">Videos</label>
 
-            <input type="checkbox" value="Additional">
-            <label>Additional Courses</label>
+            <input name="radiobtn" type="checkbox" value="City" id="City" />
+            <label for="City">City Meetups</label>
+
+            <input name="radiobtn" type="checkbox" value="Wiki" id="Wiki" />
+            <label for="Wiki">Wiki</label>
+
+            <input name="radiobtn" type="checkbox" value="Forum" id="Forum" />
+            <label for="Forum">Forum</label>
+
+            <input
+              name="radiobtn"
+              type="checkbox"
+              value="Additional"
+              id="Additional"
+            />
+            <label for="Additional">Additional Courses</label>
           </div>
+          <div>
+            <label for="textarea">Any comments or suggestions?</label>
+            <textarea id="textarea"> </textarea>
+          </div>
+          <button type="submit" id="submit">Submit</button>
         </form>
       </div>
     </main>
